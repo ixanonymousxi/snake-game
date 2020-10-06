@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+    <div id="container">
+    
+        <div class="box color1-bg" id="game-box">
+            <div id="snake-head"><img src="images/head.png"></div>
+            <div id="score"></div>
+        </div>
+    
+        <div class="box color2-bg" id="begin-box">
+            <div class="info">
+            <h1>Snake Game</h1>
+            <p>Directions: Using the arrow keys, move the snake head to collect as many eggs as possible to achieve the
+                highscore. Make sure you don't run into any walls, bad eggs (colored red), or your own body as that will end
+                the game.</p>
+            <input type="button" class="start-button" onclick="begin('easy')" value="Easy (Egg Score = 50)">
+            <input type="button" class="start-button" onclick="begin('medium')" value="Medium (Egg Score = 100)">
+            <input type="button" class="start-button" onclick="begin('hard')" value="Hard (Egg Score = 150)">
+            </div>
+        </div>
+    
+        <div class="box color2-bg" id="lose-box">
+            <div class="info">
+            <h1>Game Over</h1>
+            <p id="final-score">Your score is:</p>
+            <input type="button" class="start-button" onclick="restart()" value="Restart">
+            </div>
+        </div>
+    
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
